@@ -1,0 +1,148 @@
+#include <iostream>
+using namespace std;
+int main(){
+int quant;
+int choice;
+int qrooms=0,qpasta=0,qburger=0,qnoodles=0,qshake=0,qchicken=0;
+int srooms=0,spasta=0,sburger=0,snoodles=0,sshake=0,schicken=0,d;
+int t_rooms=0,t_pasta=0,t_burger=0,t_noodles=0,t_shake=0,t_chicken=0;
+cout<<"\n\tQuantity of items we have";
+cout<<"\nRooms available";
+cin>>qrooms;
+cout<<"\n\tQuantity of pasta:";
+cin>>qpasta;
+cout<<"\n\tQuantity of burger:";
+cin>>qburger;
+cout<<"\n\tQuantity of noodles:";
+cin>>qnoodles;
+cout<<"\n\tQuantity of shake:";
+cin>>qshake;
+cout<<"\n\tQuantity of chicken:";
+cin>>qchicken;
+cout<<"\n\t\t\t please select from the above menu";
+cout<<"\n1) Rooms";
+cout<<"\n2) pasta";
+cout<<"\n3) burger";
+cout<<"\n4) noodles";
+cout<<"\n5) shake";
+cout<<"\n6) chicken roll";
+cout<<"\n7) info regarding sales and collection";
+cout<<"\n8) exit";
+
+cout<<"please enter your choice : ";
+cin>>choice;
+switch(choice){
+case 1:
+cout<<"enter the number of rooms you want:";
+cin>>quant;
+if(qrooms - srooms >=quant){
+srooms=srooms+quant;
+t_rooms=t_rooms+quant*1200;
+cout<<"\n\n\t\t"<<quant<<"room/rooms have been alloted to you";
+}
+else
+cout<<"\n\tonly"<<qrooms-srooms<<"rooms remaining in hotel";
+break;
+
+case 2:
+cout<<"enter the pasta quantity:";
+cin>>quant;
+if(qpasta - spasta >=quant){
+spasta=spasta+quant;
+t_pasta=t_pasta+quant*250;
+cout<<"\n\n\t\t"<<quant<<"pasta is the order!!";
+}
+else
+cout<<"\n\tonly"<<qpasta-spasta<<"pasta remaining in hotel";
+break;
+
+case 3:
+cout<<"enter the burger quantity:";
+cin>>quant;
+if(qburger - sburger >=quant){
+sburger=sburger+quant;
+t_burger=t_burger+quant*120;
+cout<<"\n\n\t\t"<<quant<<"burger is the order!!";
+}
+else
+cout<<"\n\tonly"<<qburger-sburger<<"burger remaining in hotel";
+break;
+
+case 4:
+cout<<"enter the noodles quantity:";
+cin>>quant;
+if(qnoodles - snoodles >=quant){
+snoodles=snoodles+quant;
+t_noodles=t_noodles+quant*250;
+cout<<"\n\n\t\t"<<quant<<"noodles is the order!!";
+}
+else
+cout<<"\n\tonly"<<qnoodles-snoodles<<"noodles remaining in hotel";
+break;
+
+case 5:
+cout<<"enter the shake quantity:";
+cin>>quant;
+if(qshake - sshake >=quant){
+sshake=sshake+quant;
+t_shake=t_shake+quant*250;
+cout<<"\n\n\t\t"<<quant<<"shake is the order!!";
+}
+else
+cout<<"\n\tonly"<<qshake-sshake<<"shake remaining in hotel";
+break;
+
+case 6:
+cout<<"enter the shake quantity:";
+cin>>quant;
+if(qchicken - schicken >=quant){
+schicken=schicken+quant;
+t_chicken=t_chicken+quant*250;
+cout<<"\n\n\t\t"<<quant<<"chicken roll is the order!!";
+}
+else
+d=qchicken-schicken;
+cout<<"\n\tonly"<<d;
+cout<<"chicken roll remaining in hotel";
+break;
+
+case 7:
+cout<<"\n\tdetails of sales and collevctions";
+cout<<"\n\tnumber of rooms we had:"<<qrooms;
+cout<<"\n\tnumber of rooms we gave for rent"<<srooms;
+cout<<"\n\treamianing rooms"<<qrooms-srooms;
+cout<<"\n\ttotal romm collections for the day:"<<t_rooms;
+
+cout<<"\n\tnumber of pasta we had:"<<qpasta;
+cout<<"\n\tnumber of pasta we gave for rent"<<spasta;
+cout<<"\n\treamianing pasta"<<qpasta-spasta;
+cout<<"\n\ttotal pasta collections for the day:"<<t_pasta;
+
+cout<<"\n\tnumber of burger we had:"<<qburger;
+cout<<"\n\tnumber of burger we gave for rent"<<sburger;
+cout<<"\n\treamianing burger"<<qburger-sburger;
+cout<<"\n\ttotal burger collections for the day:"<<t_burger;
+
+cout<<"\n\tnumber of noodles we had:"<<qnoodles;
+cout<<"\n\tnumber of noodles we gave for rent"<<snoodles;
+cout<<"\n\treamianing noodles"<<qnoodles-snoodles;
+cout<<"\n\ttotal noodles collections for the day:"<<t_noodles;
+
+cout<<"\n\tnumber of shakes we had:"<<qshake;
+cout<<"\n\tnumber of shakes we gave for rent"<<sshake;
+cout<<"\n\treamianing shakes"<<qshake-sshake;
+cout<<"\n\ttotal shakes collections for the day:"<<t_shake;
+
+cout<<"\n\tnumber of chicken we had:"<<qchicken;
+cout<<"\n\tnumber of chicken we gave for rent"<<schicken;
+cout<<"\n\treamianing chicken"<<qchicken-schicken;
+cout<<"\n\ttotal chicken collections for the day:"<<t_chicken;
+ 
+case 8:
+exit(0);
+
+default:
+cout<<"enter the correct choice";
+}
+}
+
